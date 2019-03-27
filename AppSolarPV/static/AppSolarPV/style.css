@@ -1,0 +1,130 @@
+/*
+	Anil Patel
+	IFT 458 Spring C 2019
+	style.css
+*/
+
+body
+    {margin:0;
+	padding:0;
+	background-color: #CCC;
+	}
+
+html
+	{font-family: Arial, Helvetica, sans-serif;
+	}
+	
+.header
+    {display:flex;
+	background-color: #000000;
+    }
+	
+	.title
+		{display:block;
+		background-color: black;
+		color: white;
+		font-size: xx-large;
+		font-weight: bold;
+		padding-left: 10px;
+		padding-top: 10px;
+		}
+	
+	 .subtitle1
+		{display:block;
+		background-color: black;
+		color: white;
+		font-size: medium;
+		font-weight: light;
+		padding-left: 10px;
+		}
+	
+	 .subtitle2
+		{display:block;
+		background-color: black;
+		color: white;
+		font-weight: lighter;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		padding-top:5px;
+		}
+
+.main
+	{display: flex;
+	}
+
+.sidebar
+	{display:flex;
+	float:left;
+	flex-direction:row;
+	flex:1;
+	
+	}
+	
+	ul
+		{height:600px;
+		list-style-type: none;
+		padding:30px;
+		background-color: #9f9679;
+		margin:0;
+		}
+	
+	ul.nav li 
+		{margin-bottom: 5px;
+		font-size:small
+		}
+		
+	ul.nav a
+		{padding: 5px 15px 5px 5px;
+		display: block; 
+		width: 100px;  
+		text-decoration: none;
+		text-align: center;
+		background:#111C2A;
+		color:#ffffff;
+		}
+		
+	ul.nav a:hover, ul.nav a:active
+		{background:#2F496C;
+		color: #ffffff;
+		}
+	
+	a:visited
+		{color:#CCCCCC;
+		}
+
+.mainRight
+	{display:column;
+	flex-direction: row;
+	padding-left:30px;
+	padding-top:30px;
+	margin-right: 30px;
+	}
+	
+.footer
+    {display:flex;
+    }
+    	.foot
+	    	{	background-color: #000000;
+		    	color:white;
+	    	}
+img.index
+	{display:block;
+	width: 780px;
+	max-width: 100%; 
+	max-height: 780px;
+	min-width: 450px;
+	}
+	
+img.login
+	{width: 630px;
+	max-width: 100%; 
+	max-height: 630px;
+	min-width: 450px;
+	}
+	
+img.contact
+	{width: 800px;
+	max-width: 100%; 
+	max-height: 800px;
+	min-width: 450px;
+	}
