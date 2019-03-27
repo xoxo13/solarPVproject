@@ -1,0 +1,72 @@
+<!--
+	Anil Patel
+	IFT 458 Spring C 2019
+	login.html
+-->
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>solarPV R & D</title>
+	<link rel="stylesheet" type ="text/css" href="{% static 'AppSolarPV/style.css' %}" />
+	<script type ="text/javascript" src="{% static 'AppSolarPV/script.js' %}"></script>
+</head>
+
+<body>
+	
+<div id="header">
+	<div class="title">
+		solarPV
+	</div>
+	
+	<div class="subtitle1">
+		Research & Development
+	</div>
+	
+	<div style="text-align: right" class="subtitle2">
+		PV Module &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		PV Systems &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		Data Analytics &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		Cybersecurity
+	</div>
+</div>
+
+	<div class="main">
+		<div class="sideBar">
+			<ul class="nav">
+				<svg width="120px" height="125px" >
+					<circle cx="55" cy="50" r="48" stroke="black" stroke-width="2" fill="#9f9679" />
+					<circle cx="55" cy="50" r="38" stroke="black" stroke-width="4" fill="#9f9679" />
+					<circle cx="55" cy="50" r="33" stroke="black" stroke-width="2" fill="#9f9679" />
+					<circle cx="55" cy="50" r="20" stroke="black" stroke-width="10" fill="#9f9679" />
+				</svg>
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'registration' %}">Register</a></li>
+				<li><a href="{% url 'login' %}">Log In</a></li>
+		        <li><a href="{% url 'contact' %}">Contact</a></li>
+				<li><a href="{% url 'policy' %}">Privacy Policy</a></li>
+				<li><a href="{% url 'wpdash' %}">WebPortal Dash</a></li>
+			</ul>
+		</div>
+		<div class="mainRight">
+		
+			<h1>Log In</h1>
+			<img class="login" src="{% static 'AppSolarPV/MSP2.jpg' %}" alt=""/>
+			<br><br><form id="registration">
+				<label>Username</label><input type="textbox" name="uName" required="required"/><br>
+				<label>Password</label><input type="password" name="pass" required="required" pattern="[0-9a-zA-Z]{0,8}" maxlength="8" size="8"/><br><br>
+				<input type="submit" value="Submit">
+			</form>
+			
+	</div>	
+		</div>
+	</div>
+</body>
+
+<footer>		
+	<div class="foot"style="font-size: x-small; text-align: center">
+		© Copyright solarPV 2019.<br>All Rights Reserved.
+	</div>
+</footer>
