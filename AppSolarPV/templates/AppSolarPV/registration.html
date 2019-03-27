@@ -1,0 +1,153 @@
+<!--
+	Anil Patel
+	IFT 458 Spring C 2019
+	registration.html
+-->
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>solarPV R & D</title>
+	<link rel="stylesheet" type ="text/css" href="{% static 'AppSolarPV/style.css' %}" />
+	<script type ="text/javascript" src="{% static 'AppSolarPV/script.js' %}"></script>
+</head>
+
+<body>
+	
+<div id="header">
+	<div class="title">
+		solarPV
+	</div>
+	
+	<div class="subtitle1">
+		Research & Development
+	</div>
+	
+	<div style="text-align: right" class="subtitle2">
+		PV Module &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		PV Systems &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		Data Analytics &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		Cybersecurity
+	</div>
+</div>
+
+	<div class="main">
+		<div class="sideBar">
+			<ul class="nav">
+				<svg width="120px" height="125px" >
+					<circle cx="55" cy="50" r="48" stroke="black" stroke-width="2" fill="#9f9679" />
+					<circle cx="55" cy="50" r="38" stroke="black" stroke-width="4" fill="#9f9679" />
+					<circle cx="55" cy="50" r="33" stroke="black" stroke-width="2" fill="#9f9679" />
+					<circle cx="55" cy="50" r="20" stroke="black" stroke-width="10" fill="#9f9679" />
+				</svg>
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'registration' %}">Register</a></li>
+				<li><a href="{% url 'login' %}">Log In</a></li>
+		        <li><a href="{% url 'contact' %}">Contact</a></li>
+				<li><a href="{% url 'policy' %}">Privacy Policy</a></li>
+				<li><a href="{% url 'wpdash' %}">WebPortal Dash</a></li>
+			</ul>
+		</div>
+		<div class="mainRight">
+		
+			<h1>Registration</h1>
+			<div style="color: red;">*Required Field</div><br/>
+			<form id="registration" onsubmit="return validateForm()">
+				<label>Username</label><span style="color: red">*</span>
+					<input type="textbox" name="userID"/>
+					<span style="font-size: x-small"> (8 characters maximum)</span><br>
+				<label>Password</label><span style="color: red">*</span>
+					<input type="password" name="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{4,8}$" maxlength="8" size="8"/>
+					<span style="font-size: x-small">(8 characters maximum, containing minimum of one digit, one lowercase letter, & one uppercase letter)</span><br><br>
+				
+				<label>First Name </label><input type="textbox" name="fName"/><br>
+				<label>Middle Name </label><input type="textbox" name="mName"/><br>
+				<label>Last Name</label><span style="color: red">* </span><input type="textbox" name="lName"/><br>
+				
+				<br>Gender<span style="color: red">* </span>
+				<input type="radio" name="gender" value="female"/><label> Female </label>
+				<input type="radio" name="gender" value="male" /><label> Male </label>
+				<input type="radio" name="gender" value="customGender" />
+					<input type="textbox" name="customGender" placeholder="Custom Gender"/>
+				<input type="radio" name="gender" value="declined" /><label> Decline to Answer</label><br><br>
+				
+				<label>Address Line 1</label><span style="color: red">* </span><input type="textbox" name="1"/><br>
+				<label>Address Line 2&nbsp&nbsp</label><input type="textbox" name="address2"/><br>
+				<label>ZIP</label><span style="color: red">*</span><input type="textbox" name="zip" pattern="[0-9]*" maxlength="5"/><br>
+				<label>City</label><span style="color: red">*</span><input type="textbox" name="city"/><br>
+				<label>State</label><span style="color: red">*</span>
+					<select name="state" form="registration" >
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="DC">District Of Columbia</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+					</select><br><br>
+				
+				<label>Email</label><span style="color: red">*</span>
+					<input type="email" name="email" placeholder="user@example.com" /><br>
+				<label>Cell Phone</label><span style="color:red">*</span>
+					<input type="tel" name="cell" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br>
+				<label>Company</label><span style="color: red">*</span><input type="textbox" name="company" /><br><br>
+				
+				<input type="submit" value="Submit">
+			</form>
+			
+	</div>	
+		</div>
+	</div>
+</body>
+
+<footer>		
+	<div class="foot"style="font-size: x-small; text-align: center">
+		© Copyright solarPV 2019.<br>All Rights Reserved.
+	</div>
+</footer>
