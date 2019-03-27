@@ -1,0 +1,66 @@
+<!--
+	Anil Patel
+	IFT 458 Spring C 2019
+	policy.html
+-->
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>solarPV R & D</title>
+	<link rel="stylesheet" type ="text/css" href="{% static 'AppSolarPV/style.css' %}" />
+	<script type ="text/javascript" src="{% static 'AppSolarPV/script.js' %}"></script>
+</head>
+
+<body>
+	
+<div id="header">
+	<div class="title">
+		solarPV
+	</div>
+	
+	<div class="subtitle1">
+		Research & Development
+	</div>
+	
+	<div style="text-align: right" class="subtitle2">
+		PV Module &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		PV Systems &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		Data Analytics &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		Cybersecurity
+	</div>
+</div>
+
+	<div class="main">
+		<div class="sideBar">
+			<ul class="nav">
+				<svg width="120px" height="125px" >
+					<circle cx="55" cy="50" r="48" stroke="black" stroke-width="2" fill="#9f9679" />
+					<circle cx="55" cy="50" r="38" stroke="black" stroke-width="4" fill="#9f9679" />
+					<circle cx="55" cy="50" r="33" stroke="black" stroke-width="2" fill="#9f9679" />
+					<circle cx="55" cy="50" r="20" stroke="black" stroke-width="10" fill="#9f9679" />
+				</svg>
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'registration' %}">Register</a></li>
+				<li><a href="{% url 'login' %}">Log In</a></li>
+		        <li><a href="{% url 'contact' %}">Contact</a></li>
+				<li><a href="{% url 'policy' %}">Privacy Policy</a></li>
+				<li><a href="{% url 'wpdash' %}">WebPortal Dash</a></li>
+			</ul>
+		</div>
+		<div class="mainRight">
+		
+			<h1>Privacy Policy</h1>
+			<div style="font-size:small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris suscipit ex at condimentum hendrerit. Ut sit amet eros at massa ultrices eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque placerat ligula ut nulla consequat, ultrices laoreet nunc faucibus. In hac habitasse platea dictumst. Ut euismod malesuada nisi ac imperdiet. Donec porttitor iaculis fermentum. Integer sed euismod felis. Pellentesque scelerisque massa et nulla pretium, id dictum ex aliquet. Vivamus ac tempus turpis. Vivamus condimentum id quam commodo condimentum. Vestibulum lobortis malesuada tincidunt. Suspendisse bibendum interdum nisl sit amet dapibus. Nunc sem felis, malesuada ut tempus ac, dictum nec quam.<br><br>Mauris fringilla porttitor ipsum. Donec scelerisque quam libero, non ullamcorper elit blandit nec. Ut et quam lacus. Vivamus accumsan, felis nec scelerisque efficitur, elit tortor tincidunt diam, ac sollicitudin arcu felis at ligula. Nulla feugiat metus metus, sit amet efficitur metus posuere et. Praesent blandit, ante sed aliquet auctor, enim ante fringilla enim, at ullamcorper augue dolor ac ipsum. Etiam ultricies est in nisi interdum lobortis. Morbi eget libero sit amet risus luctus tincidunt. Ut sem orci, maximus id tortor ut, bibendum elementum sem. Cras commodo accumsan tortor. Nunc tortor dui, sollicitudin eget venenatis in, blandit sed dui. Vestibulum sapien diam, suscipit varius mollis id, efficitur vel felis.<br><br>Ut condimentum blandit risus, sed fringilla ligula ultricies et. Donec tempor mauris et lorem vulputate, et volutpat dui bibendum. Cras est ante, condimentum non laoreet porta, congue at lorem. Sed efficitur posuere diam, vel scelerisque magna lobortis quis. Maecenas erat metus, gravida vel lobortis non, semper a diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat dapibus dolor in auctor. Sed a sapien quam. Proin vel sodales orci. Curabitur egestas semper dolor, in laoreet ligula pharetra aliquet. Aliquam erat volutpat. Integer vitae elit eget justo imperdiet efficitur. In a mi consectetur, cursus ipsum id, accumsan augue. Quisque sodales nec orci a interdum.</div>
+	</div>	
+		</div>
+	</div>
+</body>
+
+<footer>		
+	<div class="foot"style="font-size: x-small; text-align: center">
+		© Copyright solarPV 2019.<br>All Rights Reserved.
+	</div>
+</footer>
