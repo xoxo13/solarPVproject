@@ -26,10 +26,10 @@ class CertificateDetailView(generics.RetrieveAPIView):
 
 
 class ServiceListView(generics.ListAPIView):
-    queryset = Product.objects.all()
+    queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 
 
 class ServiceDetailView(generics.RetrieveAPIView):
-    queryset = Product.objects.all()
+    queryset = Service.objects.all()
     serializer_class = ServiceSerializer
