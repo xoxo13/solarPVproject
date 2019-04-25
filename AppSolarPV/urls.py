@@ -9,4 +9,5 @@ urlpatterns = [
     path('policy/', views.policy, name='policy'),
     path('registration/', views.registration, name='registration'),
     path('wpdash/', views.wpdash, name='wpdash')
+     path('testcert/', views.testcert, name='testcert')
 ]

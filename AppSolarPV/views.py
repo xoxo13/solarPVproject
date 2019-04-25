@@ -18,3 +18,6 @@ def registration(request):
 	
 def wpdash(request):
 	return render(request, 'AppSolarPV/wpdash.html')
+
+def testcert(request):
+	return render(request, 'AppSolarPV/testcert.html')
