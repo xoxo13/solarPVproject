@@ -1,12 +1,11 @@
 from rest_framework import serializers
-
 from ..models import Product, Certificate, Service
 
 
-class productSerializer(serializers.ModelSerializer): 
+class ProductSerializer(serializers.ModelSerializer):
 	class Meta: 
 		model = Product
-			fields = ['modelNum', 'name', 'cellTechnology', 'cellManufacturer', 'numberOfCells', 
+		fields = ['modelNum', 'name', 'cellTechnology', 'cellManufacturer', 'numberOfCells',
 		    'numberOfCellsInSeries', 'numberOfSeriesStrings','numberOfDiodes', 'productLength', 
 		    'productWidth', 'productWeigtht', 'superstrateType', 'superstrateManufacturer', 
 		    'substrateType', 'substrateManufacturer', 'frameType', 'frameAdhesive', 
@@ -14,17 +13,17 @@ class productSerializer(serializers.ModelSerializer):
 			]
 
 	
-class certificateSerializer(serializers.ModelSerializer): 
+class CertificateSerializer(serializers.ModelSerializer):
 	class Meta: 
 		model = Certificate
-			fields = ['cert_ID', 'certNumber', 'locationID', 'reportNumber', 
+		fields = ['cert_ID', 'certNumber', 'locationID', 'reportNumber',
 			'userID', 'testStandard', 'productID', 'certIssueDate'
 			]
 
 
-class serviceSerializer(serializers.ModelSerializer): 
+class ServiceSerializer(serializers.ModelSerializer):
 	class Meta: 
 		model = Service
-			fields = ['serviceID', 'serviceName','description', 'isFIrequired', 
+		fields = ['serviceID', 'serviceName','description', 'isFIrequired',
 			'fiFrequency', 'testStandardID' 
 			]

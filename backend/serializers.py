@@ -2,7 +2,6 @@ from rest_framework import serializers
 from ..models import Product, Certificate, Service
 
 class ProductSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Product
         fields = ('modelNum', 'name', 'cellTechnology', 'cellManufacturer', 'numberOfCells',
